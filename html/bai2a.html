@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2a_DangKy</title>
+    <link rel = "stylesheet"  href = "../css/bootstrap.min.css">
+    <script scr = "../js/jquery-3.7.1.min.js"></script>
+    <script scr = "../js/jquery-3.7.1.min.js"></script>
+    <script scr ="../js/bootstrap.js"></script>
+    <script>
+        function inputStudent(){
+        let HoTen = prompt("UserName");
+        let MatKhau = prompt("PassWord");
+        if (HoTen && MatKhau !=null){
+            let table = document.getElementById("studentList");
+            let row = table.insertRow(2);
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+            cell1.innerHTML = HoTen;
+            cell2.innerHTML = MatKhau
+        }else{
+            alert("Vui lòng không để trống!");
+            }
+        }
+    </script>
+    <style>
+        table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        background-color: #f9f3f9; /* nền nhạt */
+        }
+        th {
+        color: rgb(240, 149, 196); 
+        font-size: 20px;
+        text-align: center;
+        background-color: #ddd; /* nền tiêu đề */
+        padding: 5px;
+        }
+        td {
+        border: 1px solid black;
+        padding: 5px;
+        }
+        button {
+        padding: 3px 8px;
+        color: #808080;
+        }
+    </style>
+</head>
+<body>
+  <!--Form đăng ký-->
+    <form method="get" action="dangnhap.html">
+    <table>
+        <tr>
+            <th colspan="2">THÔNG TIN ĐĂNG KÝ</th>
+        </tr>
+        <tr>
+            <td>Họ tên</td>
+            <td><input type="text" id="username" name="username"></td>
+        </tr>
+        <tr>
+            <td>Mật khẩu</td>
+            <td><input type="password" id="password" name="password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">Nhập</button></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
